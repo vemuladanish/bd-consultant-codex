@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The BD Consultant Codex — Elite High-Ticket Sales Training</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0D0D0D;
+  --paper: #F5F0E8;
+  --gold: #B8922A;
+  --gold-light: #D4A843;
+  --gold-pale: #F0E0B0;
+  --cream: #EDE8D8;
+  --muted: #6B6355;
+  --rule: #C8B89A;
+  --accent: #1A3A2A;
+  --accent-light: #2D5A40;
+  --alert: #8B2020;
+  --white: #FEFCF7;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ── COVER PAGE ── */
+.cover {
+  min-height: 100vh;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(184,146,42,0.07) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(184,146,42,0.07) 60px);
+}
+.cover-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  padding: 6px 20px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.cover h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 6vw, 80px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.05;
+  max-width: 820px;
+  position: relative;
+}
+.cover h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.cover-sub {
+  font-size: 17px;
+  color: rgba(245,240,232,0.65);
+  margin-top: 24px;
+  max-width: 560px;
+  font-weight: 300;
+  position: relative;
+}
+.cover-rule {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 40px auto;
+  position: relative;
+}
+.cover-meta {
+  display: flex;
+  gap: 48px;
+  position: relative;
+}
+.cover-meta-item {
+  text-align: center;
+}
+.cover-meta-item .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold-light);
+  display: block;
+}
+.cover-meta-item .label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: rgba(245,240,232,0.5);
+  text-transform: uppercase;
+}
+
+/* ── NAVIGATION BAR ── */
+.toc-bar {
+  background: var(--ink);
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(184,146,42,0.3);
+}
+.toc-bar::-webkit-scrollbar { display: none; }
+.toc-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.5);
+  text-decoration: none;
+  padding: 14px 16px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.toc-link:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── PART DIVIDERS ── */
+.part-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 80px 32px;
+  text-align: center;
+  margin: 0;
+}
+.part-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 16px;
+}
+.part-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.part-header p {
+  color: rgba(245,240,232,0.6);
+  margin-top: 16px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+}
+
+/* ── MODULE SECTIONS ── */
+.module {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.module-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+.module h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+.module-intro {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 680px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* ── HEADINGS ── */
+h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 40px 0 16px;
+}
+h5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 28px 0 12px;
+}
+
+/* ── CARDS & BOXES ── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 28px 32px;
+  margin: 24px 0;
+}
+.card-gold {
+  background: linear-gradient(135deg, #1A3A2A 0%, #0D2018 100%);
+  border: 1px solid var(--gold);
+  color: var(--white);
+  padding: 32px;
+  margin: 24px 0;
+  border-radius: 2px;
+}
+.card-gold h5 { color: var(--gold-light); }
+.card-gold p, .card-gold li { color: rgba(245,240,232,0.85); }
+.card-alert {
+  background: #FDF5F5;
+  border-left: 4px solid var(--alert);
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.card-alert .alert-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--alert);
+  margin-bottom: 8px;
+}
+.card-insight {
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* ── FRAMEWORK GRID ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 20px 0; }
+@media(max-width: 640px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+.grid-cell {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 20px;
+  border-radius: 2px;
+}
+.grid-cell .cell-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+.grid-cell strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+/* ── TABLES ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+thead {
+  background: var(--ink);
+  color: var(--white);
+}
+thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+tbody tr:nth-child(even) { background: var(--cream); }
+tbody tr:nth-child(odd) { background: var(--white); }
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+tbody td:first-child { font-weight: 500; }
+
+/* ── SCRIPT BLOCKS ── */
+.script-block {
+  background: var(--ink);
+  color: var(--white);
+  padding: 32px;
+  margin: 24px 0;
+  border-radius: 2px;
+  position: relative;
+}
+.script-block::before {
+  content: attr(data-label);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
+}
+.script-block p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.9);
+  margin-bottom: 12px;
+}
+.script-block .speaker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+.compare-scripts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+@media(max-width: 640px) { .compare-scripts { grid-template-columns: 1fr; } }
+.script-bad {
+  background: #2A0A0A;
+  padding: 24px;
+  border-top: 3px solid var(--alert);
+  border-radius: 2px;
+}
+.script-bad .slabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #E06060;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+.script-good {
+  background: #0A1A10;
+  padding: 24px;
+  border-top: 3px solid #4CAF50;
+  border-radius: 2px;
+}
+.script-good .slabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #80C080;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+.script-bad p, .script-good p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(245,240,232,0.85);
+}
+
+/* ── CASE STUDY ── */
+.case-study {
+  background: var(--white);
+  border: 2px solid var(--ink);
+  margin: 40px 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.case-header {
+  background: var(--ink);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.case-header .case-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.case-header h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 4px 0 0;
+}
+.case-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.case-tag {
+  background: rgba(184,146,42,0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 4px 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.case-body { padding: 32px; }
+.case-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+}
+.case-data-item .d-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.case-data-item .d-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.case-section-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 24px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+.model-answer {
+  background: linear-gradient(135deg, #0D1F14, #162B1E);
+  border: 1px solid var(--gold);
+  padding: 28px;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+.model-answer .ma-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.model-answer p, .model-answer li { color: rgba(245,240,232,0.85); }
+.model-answer h5 { color: var(--gold-light); font-size: 17px; }
+
+/* ── LISTS ── */
+ul, ol {
+  padding-left: 24px;
+  margin: 12px 0;
+}
+li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+}
+.check-list { list-style: none; padding-left: 0; }
+.check-list li::before {
+  content: '✓';
+  color: var(--accent-light);
+  font-weight: 600;
+  margin-right: 10px;
+}
+.cross-list { list-style: none; padding-left: 0; }
+.cross-list li::before {
+  content: '✗';
+  color: var(--alert);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+/* ── KPI BLOCK ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.kpi-card {
+  background: var(--ink);
+  padding: 24px;
+  text-align: center;
+  border-radius: 2px;
+}
+.kpi-card .kpi-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.kpi-card .kpi-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.5);
+  margin-top: 8px;
+}
+
+/* ── 30-DAY PLAN ── */
+.week-block {
+  border: 1px solid var(--rule);
+  margin: 20px 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.week-header {
+  background: var(--cream);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.week-num {
+  background: var(--ink);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+.week-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+.week-body { padding: 20px 24px; }
+
+/* ── FORMULA DISPLAY ── */
+.formula {
+  background: var(--ink);
+  color: var(--gold-light);
+  font-family: 'DM Mono', monospace;
+  font-size: 15px;
+  padding: 20px 28px;
+  margin: 16px 0;
+  border-radius: 2px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* ── SIMULATION EXERCISE ── */
+.sim-block {
+  border: 2px solid var(--accent);
+  margin: 32px 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sim-header {
+  background: var(--accent);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sim-header .sim-icon {
+  font-size: 20px;
+}
+.sim-header h4 {
+  color: var(--gold-light);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.sim-body { padding: 24px; background: var(--white); }
+
+/* ── TOOLKIT ── */
+.template-block {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 24px 28px;
+  margin: 20px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+.template-block .tpl-header {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--ink);
+  color: rgba(245,240,232,0.4);
+  text-align: center;
+  padding: 48px 32px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+.footer strong { color: var(--gold); }
+
+p { margin-bottom: 12px; }
+strong { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════ COVER -->
+<div class="cover">
+  <div class="cover-badge">Premium Training Program · India Edition</div>
+  <h1>The <em>Business Development</em><br>Consultant Codex</h1>
+  <p class="cover-sub">An elite-level sales training system for ₹50L–₹2Cr investment conversations. Designed for those who want to stop selling and start consulting.</p>
+  <div class="cover-rule"></div>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><span class="num">8</span><span class="label">Core Modules</span></div>
+    <div class="cover-meta-item"><span class="num">5</span><span class="label">Harvard-Style Cases</span></div>
+    <div class="cover-meta-item"><span class="num">30</span><span class="label">Day Plan</span></div>
+    <div class="cover-meta-item"><span class="num">₹1Cr+</span><span class="label">Deal Calibre</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ NAV -->
+<nav class="toc-bar">
+  <a class="toc-link" href="#m1">Psychology</a>
+  <a class="toc-link" href="#m2">Financial Thinking</a>
+  <a class="toc-link" href="#m3">Consulting Frameworks</a>
+  <a class="toc-link" href="#m4">Authority & Communication</a>
+  <a class="toc-link" href="#m5">Objection Handling</a>
+  <a class="toc-link" href="#m6">Negotiation</a>
+  <a class="toc-link" href="#m7">Pipeline Systems</a>
+  <a class="toc-link" href="#m8">Closing</a>
+  <a class="toc-link" href="#cases">Case Studies</a>
+  <a class="toc-link" href="#simulations">Simulations</a>
+  <a class="toc-link" href="#toolkit">Toolkit</a>
+  <a class="toc-link" href="#plan30">30-Day Plan</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ PART I -->
+<div class="part-header">
+  <span class="part-number">Part I — Foundation</span>
+  <h2>Thinking Like a Consultant,<br>Not a Salesperson</h2>
+  <p>The fundamental shift from pushing products to structuring decisions. This is where most BD professionals fail — not in technique, but in mindset architecture.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════ MODULE 1 -->
+<div id="m1" class="module">
+<div class="container">
+  <span class="module-tag">Module 01</span>
+  <h3>High-Ticket Sales Psychology<br>& Buyer Behaviour</h3>
+  <p class="module-intro">At ₹1 Crore+, you are not selling a product. You are selling a decision. Understanding how wealthy investors actually think — and what breaks their trust — is the foundational skill of a BD Consultant.</p>
+
+  <h4>Learning Objectives</h4>
+  <div class="grid-3">
+    <div class="grid-cell"><span class="cell-label">Objective 1</span><strong>Map the HNI buyer's decision journey</strong>Understand the 6-stage psychological process from awareness to commitment.</div>
+    <div class="grid-cell"><span class="cell-label">Objective 2</span><strong>Identify trust architecture</strong>Know exactly which signals build authority vs. which destroy it in seconds.</div>
+    <div class="grid-cell"><span class="cell-label">Objective 3</span><strong>Diagnose buyer type</strong>Classify prospects into Risk Profile archetypes and adapt your approach accordingly.</div>
+  </div>
+
+  <h4>The HNI Decision Psychology Framework</h4>
+  <p>High-net-worth investors in the ₹50L–₹2Cr range operate on a fundamentally different psychology than retail buyers. They have already made money. Their primary fear is <strong>not losing it</strong>, not missing an opportunity.</p>
+
+  <div class="card-insight">"The salesperson's job is to create desire. The consultant's job is to eliminate doubt. At ₹1 Crore, doubt always wins over desire."</div>
+
+  <h5>The 6-Stage HNI Decision Architecture</h5>
+  <table>
+    <thead><tr><th>Stage</th><th>What the Buyer Is Thinking</th><th>What You Must Do</th><th>What Kills the Deal</th></tr></thead>
+    <tbody>
+      <tr><td>1. Trigger</td><td>"I have idle capital / I'm bored with FDs / My friend just invested"</td><td>Create a credible reason to meet — not a pitch, a conversation</td><td>Calling cold with a brochure</td></tr>
+      <tr><td>2. Assessment</td><td>"Who is this person? Can I trust them with my money?"</td><td>Signal expertise immediately. Reference case data, not products</td><td>Talking about your company in the first 5 minutes</td></tr>
+      <tr><td>3. Exploration</td><td>"Tell me more — but I'm skeptical of everything"</td><td>Ask structured questions. Let them talk 70% of the time</td><td>Over-presenting. Answering questions they didn't ask</td></tr>
+      <tr><td>4. Negotiation</td><td>"I want better terms / I need to think / I want to check elsewhere"</td><td>Frame constraints authoritatively. Don't cave instantly</td><td>Desperate discounting or "Let me check with my manager"</td></tr>
+      <tr><td>5. Validation</td><td>"Let me verify this with someone I trust"</td><td>Provide reference infrastructure. Facilitate third-party validation</td><td>Blocking this process. It destroys trust</td></tr>
+      <tr><td>6. Commitment</td><td>"If everything checks out, I'm in — but I need one final push"</td><td>Make the decision frictionless. Remove paperwork pain</td><td>Going silent and waiting. Urgency must be real, not manufactured</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The 4 HNI Investor Archetypes</h4>
+  <div class="grid-2">
+    <div class="card">
+      <h5>🦅 The Commander</h5>
+      <p><strong>Profile:</strong> Business owner, 45–60, self-made. Decisive, impatient, respects directness.</p>
+      <p><strong>Fear:</strong> Being fooled. Appearing naive.</p>
+      <p><strong>What works:</strong> Get to numbers fast. Give him decision-making control. Never over-explain.</p>
+      <p><strong>Script trigger:</strong> "Sir, let me give you just the three numbers that matter..."</p>
+    </div>
+    <div class="card">
+      <h5>📊 The Analyst</h5>
+      <p><strong>Profile:</strong> Senior professional, CA/Engineer, 38–55. Needs to understand before deciding.</p>
+      <p><strong>Fear:</strong> Making a decision with incomplete information.</p>
+      <p><strong>What works:</strong> Send data in advance. Walk through financial model. Answer every sub-question.</p>
+      <p><strong>Script trigger:</strong> "I've prepared a financial model for your specific investment size. Would you prefer I walk you through the assumptions?"</p>
+    </div>
+    <div class="card">
+      <h5>🤝 The Relationship Investor</h5>
+      <p><strong>Profile:</strong> Family business heir or professional, trusts people over data. Needs social proof from someone they know.</p>
+      <p><strong>Fear:</strong> Being abandoned post-investment.</p>
+      <p><strong>What works:</strong> Lead with references. Emphasise post-investment support. Build friendship first.</p>
+      <p><strong>Script trigger:</strong> "Mr. Sharma from your industry is already our partner in Pune. Would it help to speak with him directly?"</p>
+    </div>
+    <div class="card">
+      <h5>⚖️ The Skeptic</h5>
+      <p><strong>Profile:</strong> Has been burned before. Second-generation wealth. Highly risk-conscious.</p>
+      <p><strong>Fear:</strong> Everything. Especially enthusiasm.</p>
+      <p><strong>What works:</strong> Lead with risks, not returns. Acknowledge downsides proactively. Go slower than they expect.</p>
+      <p><strong>Script trigger:</strong> "Before we discuss returns, I want to be upfront about three risks you should evaluate..."</p>
+    </div>
+  </div>
+
+  <h4>The Trust Architecture — What Signals Authority</h4>
+  <div class="compare-scripts">
+    <div class="script-bad">
+      <span class="slabel">❌ Salesperson Behaviour (Destroys Trust)</span>
+      <p>"Sir, yeh bahut acha opportunity hai. Return bahut acha milega. Aap soch mat karo, bas sign kar do. Maine last week 3 deals close kiye hain..."</p>
+    </div>
+    <div class="script-good">
+      <span class="slabel">✓ Consultant Behaviour (Builds Trust)</span>
+      <p>"Based on your capital allocation and risk appetite, I want to evaluate whether this model is actually suitable for you. There are three scenarios I'd like to walk through — two work in your favour, one doesn't. Let's be clear-eyed about all three."</p>
+    </div>
+  </div>
+
+  <h4>Common Mistakes — Module 01</h4>
+  <ul class="cross-list">
+    <li><strong>Enthusiasm before credibility:</strong> Never pitch before establishing authority. Enthusiasm signals desperation at this level.</li>
+    <li><strong>Telling instead of asking:</strong> The best BD Consultants talk 30% of the time in discovery calls.</li>
+    <li><strong>Treating all HNIs the same:</strong> A retired IAS officer requires a completely different approach than a second-generation business owner.</li>
+    <li><strong>Rushing the timeline:</strong> A ₹1Cr decision has a natural incubation period. Rushing signals that you need the deal more than they need you.</li>
+  </ul>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 2 -->
+<div id="m2" class="module" style="background: var(--cream);">
+<div class="container">
+  <span class="module-tag">Module 02</span>
+  <h3>Financial Thinking for<br>High-Ticket Sales</h3>
+  <p class="module-intro">You cannot guide a ₹1 Crore investment conversation without financial literacy. Not accounting-level expertise — consultant-level financial fluency. You must speak the language of returns, risk, and capital allocation.</p>
+
+  <h4>Learning Objectives</h4>
+  <ul class="check-list">
+    <li>Understand and explain ROI, IRR, payback period, and break-even to a non-technical investor</li>
+    <li>Build and present a simple financial model for a franchise or investment opportunity</li>
+    <li>Compare investment options using a structured framework (not just returns)</li>
+    <li>Quantify and communicate risk without creating panic</li>
+  </ul>
+
+  <h4>The Five Financial Metrics Every BD Consultant Must Master</h4>
+
+  <h5>1. Return on Investment (ROI)</h5>
+  <p>The simplest metric — but often misused. ROI tells you how much return you get on total capital deployed.</p>
+  <div class="formula">ROI (%) = (Net Profit / Total Investment) × 100</div>
+  <div class="card">
+    <p><strong>Real Example:</strong> FOCO Franchise — Quick Service Restaurant</p>
+    <p>Investment: ₹80 Lakhs | Annual Profit (Year 1): ₹14 Lakhs</p>
+    <p><strong>ROI = (14/80) × 100 = 17.5% annually</strong></p>
+    <p>Compare: FD rates at 7%, Equity market average 12–14%. This is your context frame.</p>
+  </div>
+
+  <h5>2. Internal Rate of Return (IRR)</h5>
+  <p>IRR accounts for the time value of money — what ₹80L today is worth over 5 years. It's the single most credible metric for sophisticated investors.</p>
+  <div class="formula">IRR = The discount rate at which NPV = 0</div>
+  <div class="card">
+    <p><strong>How to explain it simply:</strong> "Sir, IRR is essentially the true annualised return on your investment, accounting for exactly when your money comes back to you. If an FD gives you 7% IRR and this franchise gives you 24% IRR — that's the real comparison."</p>
+    <p><strong>Rule of thumb:</strong> IRR above 18% is attractive for most HNIs. IRR above 25% needs extra risk justification.</p>
+  </div>
+
+  <h5>3. Payback Period</h5>
+  <div class="formula">Payback Period = Total Investment / Annual Net Profit</div>
+  <div class="card">
+    <p><strong>Example:</strong> ₹1 Crore investment, ₹22L annual profit → Payback = 4.5 years</p>
+    <p><strong>How to use it:</strong> "You recover your capital in under 5 years, and then this asset continues generating ₹22L+ annually. The franchise agreement runs 10 years — so you have at least 5 years of pure profit post-recovery."</p>
+  </div>
+
+  <h5>4. Break-Even Analysis</h5>
+  <p>This is the most powerful objection-handling tool in your arsenal. Knowing break-even makes you unshakeable.</p>
+  <div class="formula">Break-Even Revenue = Fixed Costs / (1 - Variable Cost Ratio)</div>
+  <div class="card">
+    <p><strong>Example — Restaurant Franchise:</strong><br>
+    Fixed costs (rent + salary + royalty): ₹3.8L/month<br>
+    Variable cost ratio: 35%<br>
+    Break-even = 3,80,000 / (1 - 0.35) = <strong>₹5,84,615/month</strong></p>
+    <p><strong>Script:</strong> "The outlet needs to generate just ₹5.85L a month to break even. Our network average for outlets in this tier is ₹9.2L. So you have a comfortable 57% buffer above break-even. Even in a bad month, you're not losing."</p>
+  </div>
+
+  <h5>5. Risk-Adjusted Return</h5>
+  <p>The most sophisticated metric — comparing returns relative to the risk taken. This is what separates consultant-level conversations from salesperson-level ones.</p>
+  <div class="card">
+    <p><strong>Framework: Risk-Return Matrix for Indian Investors (2024–25)</strong></p>
+    <table>
+      <thead><tr><th>Investment Type</th><th>Expected Return</th><th>Risk Level</th><th>Liquidity</th><th>Risk-Adj. Score</th></tr></thead>
+      <tbody>
+        <tr><td>Bank FD</td><td>6.5–7.5%</td><td>Very Low</td><td>High</td><td>Baseline</td></tr>
+        <tr><td>Debt Mutual Funds</td><td>7–9%</td><td>Low</td><td>High</td><td>Low alpha</td></tr>
+        <tr><td>Equity MF (diversified)</td><td>12–15%</td><td>Moderate-High</td><td>Medium</td><td>Good</td></tr>
+        <tr><td>Real Estate</td><td>10–14%</td><td>Moderate</td><td>Very Low</td><td>Moderate</td></tr>
+        <tr><td>Franchise (FOCO)</td><td>18–28%</td><td>Moderate</td><td>Low</td><td>Strong if brand is right</td></tr>
+        <tr><td>Direct Startup Equity</td><td>0–100%</td><td>Very High</td><td>Very Low</td><td>Speculative</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>The Financial Consultant Conversation — Step by Step</h4>
+  <div class="card-gold">
+    <h5>The 5-Step Financial Narrative</h5>
+    <ol>
+      <li><strong>Anchor to their current portfolio:</strong> "What is your money currently doing? FDs? Markets?"</li>
+      <li><strong>Quantify the opportunity cost:</strong> "At 7% on ₹1 Crore, you're earning ₹7L. At 22%, that's ₹22L — a difference of ₹15L every year."</li>
+      <li><strong>Present the model:</strong> Show IRR, payback, break-even on one single clean page.</li>
+      <li><strong>Address risk proactively:</strong> "Three risks you must know before deciding..."</li>
+      <li><strong>Summarise the decision:</strong> "The question is not whether this returns better. The question is whether the risk profile matches your comfort. Let's evaluate that together."</li>
+    </ol>
+  </div>
+
+  <h4>Common Financial Mistakes BD Consultants Make</h4>
+  <ul class="cross-list">
+    <li>Quoting returns without time frame ("20% return" — in how many years?)</li>
+    <li>Ignoring working capital requirements in the investment total</li>
+    <li>Presenting best-case projections without mentioning base-case and worst-case</li>
+    <li>Not knowing what IRR means when an investor asks directly</li>
+  </ul>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 3 -->
+<div id="m3" class="module">
+<div class="container">
+  <span class="module-tag">Module 03</span>
+  <h3>Structured Consulting<br>Frameworks for BD</h3>
+  <p class="module-intro">McKinsey doesn't pitch. It diagnoses, analyses, and recommends. You must operate the same way. The framework that separates elite BD Consultants from average BD Executives is how they structure every interaction.</p>
+
+  <h4>The DARE Framework — Your Master Operating System</h4>
+  <div class="grid-2">
+    <div class="grid-cell" style="border-left: 4px solid var(--gold)"><span class="cell-label">D — Diagnose</span><strong>Understand their complete situation</strong>Business, capital, family, risk appetite, timeline, alternatives they're considering. Ask before you answer.</div>
+    <div class="grid-cell" style="border-left: 4px solid var(--accent)"><span class="cell-label">A — Analyse</span><strong>Map their situation to your solution</strong>Not every prospect fits every product. Your analysis determines fit — and communicating that fit earns trust.</div>
+    <div class="grid-cell" style="border-left: 4px solid var(--gold)"><span class="cell-label">R — Recommend</span><strong>Give a clear, structured recommendation</strong>With a rationale. Like a doctor writing a prescription — not a waiter listing dishes. Confidence is critical.</div>
+    <div class="grid-cell" style="border-left: 4px solid var(--accent)"><span class="cell-label">E — Execute</span><strong>Structure the next step, not the close</strong>Define the exact next action, timeline, and accountabilities. Remove friction from their path to yes.</div>
+  </div>
+
+  <h4>The Discovery Call Architecture — 45-Minute Template</h4>
+  <table>
+    <thead><tr><th>Time Block</th><th>Activity</th><th>Purpose</th><th>Sample Questions</th></tr></thead>
+    <tbody>
+      <tr><td>0–5 min</td><td>Context Setting</td><td>Establish your role as advisor, not vendor</td><td>"Before I present anything, I'd like to understand your current situation — if that's okay with you."</td></tr>
+      <tr><td>5–20 min</td><td>Deep Discovery</td><td>Uncover capital, goals, fears, and decision criteria</td><td>"What's driving your interest in this right now?" / "What would success look like 3 years from now?" / "What's your biggest concern about this category?"</td></tr>
+      <tr><td>20–35 min</td><td>Calibrated Presentation</td><td>Present only what is relevant to their diagnosed needs</td><td>Not a full pitch deck — a targeted 3–5 point match between their situation and your offering.</td></tr>
+      <tr><td>35–40 min</td><td>Structured Q&A</td><td>Address concerns using frameworks, not emotion</td><td>Reframe objections as decision variables, not barriers</td></tr>
+      <tr><td>40–45 min</td><td>Next Step Definition</td><td>Leave with a clear commitment, not a vague "I'll think"</td><td>"Based on what we've discussed, the logical next step is X. Does [specific day and time] work for you?"</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The Problem-Solution-Impact (PSI) Presentation Structure</h4>
+  <p>Never start with your company or product. Always start with their problem.</p>
+  <div class="card-gold">
+    <h5>PSI in Action — Franchise Pitch Example</h5>
+    <div class="speaker" style="color: var(--gold); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">PROBLEM (Their World)</div>
+    <p>"You have ₹80–100 Lakhs sitting in FDs earning 7%. That's ₹5.6–7L a year — after tax, it barely beats inflation. Meanwhile, your time is limited and you want an asset that works without demanding your daily attention."</p>
+    <div class="speaker" style="color: var(--gold); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; margin: 16px 0 8px;">SOLUTION (Fit-Matched)</div>
+    <p>"The FOCO model is specifically designed for capital investors who want strong returns without operational headaches. You invest. A professional management team operates. You receive monthly profit distributions."</p>
+    <div class="speaker" style="color: var(--gold); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; margin: 16px 0 8px;">IMPACT (Quantified)</div>
+    <p>"Based on your investment range and our outlet performance data — specifically outlets in Tier 2 cities with similar demographics — you're looking at an IRR of 21–24%, with payback in 4–4.5 years. I have the model ready if you'd like to go through it number by number."</p>
+  </div>
+
+  <h4>The Mutually Exclusive, Collectively Exhaustive (MECE) Principle</h4>
+  <p>Borrowed from McKinsey — structure your thinking so every argument is distinct, nothing overlaps, and nothing is missing. Apply this to:</p>
+  <ul class="check-list">
+    <li>Presenting investment options (each option must be clearly differentiated)</li>
+    <li>Handling objections (categorise objections into 3–4 buckets, address each distinctly)</li>
+    <li>Risk analysis (financial risk / operational risk / market risk — no overlap)</li>
+    <li>Follow-up strategy (each touchpoint must serve a different purpose)</li>
+  </ul>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ PART II -->
+<div class="part-header">
+  <span class="part-number">Part II — Execution</span>
+  <h2>The Art of the<br>High-Stakes Conversation</h2>
+  <p>Authority, objection handling, and the architecture of deals that don't fall apart at the one-yard line.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 4 -->
+<div id="m4" class="module">
+<div class="container">
+  <span class="module-tag">Module 04</span>
+  <h3>Enterprise Communication<br>& Authority Building</h3>
+  <p class="module-intro">In high-ticket sales, how you say something is as important as what you say. The authority gap between a ₹5L deal and a ₹1Cr deal is almost entirely communicative. This module is about closing that gap.</p>
+
+  <h4>The Three Pillars of Consultant Authority</h4>
+  <div class="grid-3">
+    <div class="card" style="border-top: 3px solid var(--gold)">
+      <h5>1. Lexical Authority</h5>
+      <p>The words you use signal your level. Use precise financial and strategic language — not jargon, but specific terms that signal expertise. "IRR", "capital efficiency", "risk-adjusted return", "cohort performance" — these are not just words. They are trust signals.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--gold)">
+      <h5>2. Structural Authority</h5>
+      <p>How you organise your thinking. A consultant says "There are three factors we need to evaluate. First..." A salesperson rambles. Structure creates confidence. Use "First / Second / Third" or "The short answer is X, and here's why..."</p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--gold)">
+      <h5>3. Silence Authority</h5>
+      <p>High-trust communicators are comfortable with silence. After asking a question, do not rush to fill the pause. Let the prospect think. Silence signals confidence; nervous chatter signals desperation.</p>
+    </div>
+  </div>
+
+  <h4>The Before/After Communication Transformation</h4>
+
+  <h5>Scenario: Investor asks "What is the risk here?"</h5>
+  <div class="compare-scripts">
+    <div class="script-bad">
+      <span class="slabel">❌ SALESPERSON (Defensive)</span>
+      <p>"Sir, risk toh har jagah hota hai. But this is very low risk. Our company has been doing this for 10 years. Bahut saare investors hain jo bahut khush hain. Aap worry mat karo..."</p>
+    </div>
+    <div class="script-good">
+      <span class="slabel">✓ CONSULTANT (Structured)</span>
+      <p>"Great question — and I want to address this properly. There are three distinct risk categories here. The first is operational risk — which is mitigated through our professional management team. The second is market risk — which is where your location feasibility study comes in. The third is capital recovery risk — and our break-even analysis shows a 57% buffer above the threshold. Which of these would you like to go deeper on?"</p>
+    </div>
+  </div>
+
+  <h5>Scenario: You need to follow up after no response</h5>
+  <div class="compare-scripts">
+    <div class="script-bad">
+      <span class="slabel">❌ SALESPERSON (Desperate)</span>
+      <p>"Sir please bata do, main wait kar raha hoon. Aapne kuch decide kiya? Koi issue hai kya? Main koi bhi help karun toh batao. Slot available hai abhi..."</p>
+    </div>
+    <div class="script-good">
+      <span class="slabel">✓ CONSULTANT (Authoritative)</span>
+      <p>"Mr. Kapoor, I've been reviewing our outlet performance data for Q3 and noticed two locations that closely match your investment criteria. Wanted to share that context before your next conversation. If your evaluation timeline has shifted, happy to realign — just let me know."</p>
+    </div>
+  </div>
+
+  <h5>Scenario: Investor says "I need to think about it"</h5>
+  <div class="compare-scripts">
+    <div class="script-bad">
+      <span class="slabel">❌ SALESPERSON (Panics)</span>
+      <p>"Of course sir, no problem. Please take your time. I'll send you a WhatsApp. Please share your decision by this weekend if possible as the slot may go..."</p>
+    </div>
+    <div class="script-good">
+      <span class="slabel">✓ CONSULTANT (Controls the Frame)</span>
+      <p>"Absolutely — a decision of this scale deserves careful evaluation. Can I ask — what specific aspect are you still evaluating? I want to make sure you have everything you need, because the right decision here depends on having the right information, not just time."</p>
+    </div>
+  </div>
+
+  <h4>The PACE Framework — Vocal Control in High-Stakes Meetings</h4>
+  <table>
+    <thead><tr><th>Element</th><th>What It Means</th><th>How to Apply</th><th>Common Error</th></tr></thead>
+    <tbody>
+      <tr><td><strong>P — Pace</strong></td><td>Speed of speech</td><td>Slow down when delivering key data. Speed signals nervousness. Slow signals authority.</td><td>Rushing through financials — investor can't absorb key numbers</td></tr>
+      <tr><td><strong>A — Articulation</strong></td><td>Clarity of words</td><td>Never swallow numbers. "Seventeen percent IRR" — not "17% IRR" said quickly</td><td>Mumbling percentages and investment figures</td></tr>
+      <tr><td><strong>C — Confidence Markers</strong></td><td>Phrases that signal conviction</td><td>Use "The data shows...", "Our experience indicates...", "What I've consistently seen is..."</td><td>"I think maybe..." / "Basically..." / "Sort of..." — all destroy credibility</td></tr>
+      <tr><td><strong>E — Emphasis</strong></td><td>Strategic stress on key words</td><td>Emphasise numbers, timelines, and risk mitigators. "You recover your capital in FOUR years."</td><td>Flat monotone delivery — nothing registers</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Removing Filler Language — 30-Day Elimination Protocol</h4>
+  <div class="card-alert">
+    <div class="alert-title">⚠ Language Patterns That Signal Junior Status</div>
+    <p>Ban these from every investor conversation. Record yourself and audit weekly:</p>
+    <ul>
+      <li><strong>"Basically"</strong> — Replace with: nothing. Just say the thing.</li>
+      <li><strong>"Actually"</strong> — Implies surprise. Undermines confidence.</li>
+      <li><strong>"Frankly speaking"</strong> — Were you not being frank before?</li>
+      <li><strong>"No issue sir"</strong> — Replace with: "Certainly" or "Of course"</li>
+      <li><strong>"Only ₹1 Crore"</strong> — Never minimise their investment</li>
+      <li><strong>"Don't worry"</strong> — Condescending. They will worry more.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 5 -->
+<div id="m5" class="module" style="background: var(--cream);">
+<div class="container">
+  <span class="module-tag">Module 05</span>
+  <h3>Objection Handling<br>& Risk Mitigation</h3>
+  <p class="module-intro">In high-ticket sales, objections are not rejections. They are requests for better information or clearer risk framing. A consultant treats every objection as a diagnostic signal — what doubt is still alive, and how do I address it structurally?</p>
+
+  <h4>The Objection Taxonomy — Know What You're Actually Dealing With</h4>
+  <table>
+    <thead><tr><th>Objection Type</th><th>Surface Statement</th><th>Real Meaning</th><th>Response Strategy</th></tr></thead>
+    <tbody>
+      <tr><td>Information Gap</td><td>"I don't understand the model well enough"</td><td>You haven't explained it clearly enough</td><td>Restructure your explanation. Use analogies. Simplify.</td></tr>
+      <tr><td>Trust Deficit</td><td>"I need to verify this with someone"</td><td>I don't fully trust you or the brand yet</td><td>Facilitate verification. Provide direct references. Don't block.</td></tr>
+      <tr><td>Financial Anxiety</td><td>"The investment is too high"</td><td>I'm not sure the return justifies the risk at this amount</td><td>Re-anchor to ROI and opportunity cost. Offer structured entry options if available.</td></tr>
+      <tr><td>Competitive Comparison</td><td>"I'm looking at another option"</td><td>Help me decide between them</td><td>Create a comparison framework. Don't attack competitors.</td></tr>
+      <tr><td>Timing Deflection</td><td>"Let me think / not now / 3 months later"</td><td>Something is unresolved that I won't name</td><td>Probe deeper. "What would need to be true for you to be ready today?"</td></tr>
+      <tr><td>Genuine No</td><td>"This is not for me"</td><td>The fit is genuinely wrong</td><td>Respect it. Ask for a referral. Exit gracefully.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The ACE Objection Response Framework</h4>
+  <div class="grid-3">
+    <div class="grid-cell" style="background: #0D1F14; color: white; border: none;">
+      <span class="cell-label">A — Acknowledge</span>
+      <strong style="color: var(--gold-light);">Validate the concern without agreeing with it</strong>
+      <p style="color: rgba(245,240,232,0.8); font-size: 14px;">"That's a very fair question to raise at this stage..."</p>
+    </div>
+    <div class="grid-cell" style="background: #1A2A10; color: white; border: none;">
+      <span class="cell-label">C — Clarify</span>
+      <strong style="color: var(--gold-light);">Understand the real underlying concern</strong>
+      <p style="color: rgba(245,240,232,0.8); font-size: 14px;">"When you say it's too high — is the concern the total outflow, or the return relative to that outflow?"</p>
+    </div>
+    <div class="grid-cell" style="background: #0D1820; color: white; border: none;">
+      <span class="cell-label">E — Elevate</span>
+      <strong style="color: var(--gold-light);">Reframe the objection as a decision variable</strong>
+      <p style="color: rgba(245,240,232,0.8); font-size: 14px;">"Let me show you exactly how this looks at ₹80L vs. ₹1Cr — the IRR difference is significant and worth evaluating."</p>
+    </div>
+  </div>
+
+  <h4>The 10 Most Common HNI Objections — With Full Scripts</h4>
+
+  <div class="card">
+    <h5>Objection 1: "Returns lagta hai thoda kum hai"</h5>
+    <div class="script-block" data-label="CONSULTANT RESPONSE">
+      <p>"I understand — and I'd ask you to compare it against what your alternatives are actually doing. At 22% IRR, this investment returns more than equity mutual funds in most 5-year periods, with far lower volatility. The question I'd put to you is: what's your current best alternative at this capital level, and what's its IRR?"</p>
+      <p>[Let them answer. Then:] "The delta between that and this, compounded over 5 years on ₹1 Crore, is approximately ₹[calculate and state the actual figure]. That's the real decision."</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5>Objection 2: "Market down hai / economy uncertainty hai"</h5>
+    <div class="script-block" data-label="CONSULTANT RESPONSE">
+      <p>"That's actually one of the most important points in favour of this model. QSR and essential services franchises are historically counter-cyclical — when discretionary spending drops, value-driven food formats see increased footfall. Our own network data from 2020–21, during peak pandemic uncertainty, showed only a 12% revenue decline versus a 35–40% decline in premium dining. Uncertainty is not the same as risk — and this format is specifically designed to withstand it."</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5>Objection 3: "Mujhe apne CA se baat karni hai pehle"</h5>
+    <div class="script-block" data-label="CONSULTANT RESPONSE">
+      <p>"Absolutely — that's the right instinct for any serious investment. In fact, I'd strongly encourage it. Here's what I suggest: let me prepare a CA-ready information pack for you — financial projections, lease structure, EBITDA model, and tax implications. This will save your CA 2 hours of questions and give them exactly what they need to evaluate it properly. Can we schedule 20 minutes after your CA conversation to go through their feedback together?"</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5>Objection 4: "What if the brand doesn't do well in my city?"</h5>
+    <div class="script-block" data-label="CONSULTANT RESPONSE">
+      <p>"That's the most important question you can ask — and here's the honest answer. Before any investment, we conduct a full location feasibility study — demographic analysis, footfall data, competitive density, and consumer spending index. If that study doesn't hit our internal thresholds, we won't recommend that location. In fact, we've declined 3 enquiries in the last quarter because the locations weren't strong enough. The study is part of the process — not a formality."</p>
+    </div>
+  </div>
+
+  <h4>The Risk Proofing Technique — Address It Before They Raise It</h4>
+  <div class="card-insight">"The consultant who names the risk first is more trusted than the one who minimises it last."</div>
+  <div class="script-block" data-label="PROACTIVE RISK DISCLOSURE SCRIPT">
+    <p>"Before we go further, I want to be upfront about the three risks I'd want you to be aware of if I were in your position. First, this is an illiquid investment — your capital is locked for a minimum of 5 years. If you need this money within that window, this is the wrong vehicle. Second, outlet performance has variance — our best outlets do 2.4x the revenue of our slowest, so geography and operations matter. Third, royalty and operational costs can erode margins if not managed well. We have systems to address all three — but you should know them going in."</p>
+    <p>[Pause. Let them respond.]</p>
+    <p>"Now that we've laid out the risks — do you want to go through how each of these is actually managed in practice?"</p>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 6 -->
+<div id="m6" class="module">
+<div class="container">
+  <span class="module-tag">Module 06</span>
+  <h3>Negotiation &<br>Deal Structuring</h3>
+  <p class="module-intro">Elite BD Consultants don't negotiate from a position of accommodation. They negotiate from a position of value clarity. When you know exactly what your deal is worth — and can articulate it — you never need to discount to close.</p>
+
+  <h4>The 3 Negotiation Positions You Must Master</h4>
+  <div class="grid-3">
+    <div class="card" style="border-top: 3px solid var(--alert)">
+      <h5>Position 1: Weak</h5>
+      <p>You need this deal. The investor knows it. Every concession confirms it. The dynamic is irreversible once established.</p>
+      <p><strong>How you end up here:</strong> Desperation framing, over-discounting, too many follow-ups with nothing new.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--gold)">
+      <h5>Position 2: Parity</h5>
+      <p>You and the investor need each other equally. Most negotiations land here. It's acceptable but leaves value on the table.</p>
+      <p><strong>How you get here:</strong> Solid product, decent rapport, reasonable terms.</p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--accent)">
+      <h5>Position 3: Authority</h5>
+      <p>The investor needs this opportunity more than you need this particular investor. You are conferring access, not chasing commitment.</p>
+      <p><strong>How you get here:</strong> Scarcity is real. Your track record is documented. You have other qualified investors.</p>
+    </div>
+  </div>
+
+  <h4>The BATNA Principle — Your Negotiation Anchor</h4>
+  <p>BATNA: Best Alternative to a Negotiated Agreement. Know yours. Know theirs. The party with the stronger BATNA has leverage.</p>
+  <div class="card-gold">
+    <h5>BATNA Analysis — Franchise Investment Deal</h5>
+    <p><strong>Your BATNA as BD Consultant:</strong> You have 3 other qualified prospects for this location. The deadline is genuine. If this investor passes, you move to the next qualified candidate.</p>
+    <p><strong>Investor's BATNA:</strong> Leave ₹1Cr in FD at 7%. Or invest in equity with higher volatility. Neither matches the risk-adjusted return profile you're offering.</p>
+    <p><strong>Script when investor tries to negotiate terms:</strong> "Mr. Mehta, I completely understand the ask. Here's the position I'm in honestly — the investment terms are standardised across all our franchise partners. I don't have the flexibility to adjust them individually, and if I did, it would actually be unfair to our 47 existing partners who invested at the same terms. What I can do is walk you through why these terms are structured this way — and how they actually protect you."</p>
+  </div>
+
+  <h4>The Deal Structuring Toolkit</h4>
+  <h5>For Multi-Stage Deals</h5>
+  <table>
+    <thead><tr><th>Stage</th><th>What Happens</th><th>Your Role</th><th>Success Criteria</th></tr></thead>
+    <tbody>
+      <tr><td>Stage 1: Soft Commitment</td><td>Expression of Interest. Token amount or LOI signed.</td><td>Make this frictionless. One-page summary, simple process.</td><td>Investor has skin in the game. Psychological shift from evaluating to owning.</td></tr>
+      <tr><td>Stage 2: Due Diligence</td><td>CA review, site visit, reference calls</td><td>Facilitate actively. Don't go quiet. Send proactive updates.</td><td>All questions answered. Third-party validation complete.</td></tr>
+      <tr><td>Stage 3: Final Agreement</td><td>Franchise/investment agreement signed. Full capital deployed.</td><td>Reduce friction. Make documentation simple. Be available.</td><td>Signed agreement with payment confirmation.</td></tr>
+      <tr><td>Stage 4: Onboarding</td><td>Setup, training, launch</td><td>Stay engaged. This is where referrals are born.</td><td>Investor feels supported and excited. Referral conversation is natural.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Negotiation Pressure Techniques — The Ethical Playbook</h4>
+  <ul>
+    <li><strong>The Real Deadline:</strong> "The site is on lease review at the end of this month. After that, I cannot guarantee this specific location." (Only use if true.)</li>
+    <li><strong>The Social Proof Pivot:</strong> "I have another investor evaluating the same location. I've given you first right of refusal because your profile fits better — but I can't hold this indefinitely."</li>
+    <li><strong>The Opportunity Cost Statement:</strong> "Every month you wait, you're leaving ₹1.5L on the table in foregone returns. Over 6 months, that's ₹9L — which is almost our entire onboarding fee."</li>
+    <li><strong>The Decision Audit:</strong> "Let's be precise about what's still unresolved. Is it the financial model? The brand? The operational support? Or something else?" (Isolate the real blocker.)</li>
+  </ul>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 7 -->
+<div id="m7" class="module" style="background: var(--cream);">
+<div class="container">
+  <span class="module-tag">Module 07</span>
+  <h3>Pipeline Management<br>& Follow-up Systems</h3>
+  <p class="module-intro">Elite BD Consultants win deals through system, not memory. Your pipeline is a living document. Your follow-up must add value, not just ask for an update. This module turns your BD into a managed, predictable revenue engine.</p>
+
+  <h4>The 5-Stage Pipeline Architecture</h4>
+  <table>
+    <thead><tr><th>Stage</th><th>Definition</th><th>Typical Duration</th><th>Exit Criteria</th><th>Target Conversion</th></tr></thead>
+    <tbody>
+      <tr><td>1. Qualified Lead</td><td>Prospect has confirmed capital availability and interest</td><td>Day 1</td><td>Discovery call scheduled</td><td>50% → Stage 2</td></tr>
+      <tr><td>2. Discovery Complete</td><td>Full needs diagnosis done. Fit confirmed.</td><td>Days 1–7</td><td>Presentation delivered. Interest confirmed.</td><td>60% → Stage 3</td></tr>
+      <tr><td>3. Active Evaluation</td><td>Investor is actively comparing, doing due diligence</td><td>Days 7–30</td><td>All objections addressed. Terms accepted in principle.</td><td>55% → Stage 4</td></tr>
+      <tr><td>4. Commitment Pending</td><td>Investor has verbally agreed. Paperwork/payment pending.</td><td>Days 30–45</td><td>Agreement signed + payment received</td><td>80% → Close</td></tr>
+      <tr><td>5. Closed</td><td>Deal complete</td><td>—</td><td>Onboarding initiated</td><td>Target: 100% referral ask</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The Value-Add Follow-Up Calendar</h4>
+  <p>Every follow-up must deliver something — an insight, a data point, a relevant news item. Never follow up empty-handed.</p>
+  <table>
+    <thead><tr><th>Day After Last Contact</th><th>Follow-up Type</th><th>Medium</th><th>Content Example</th></tr></thead>
+    <tbody>
+      <tr><td>Day 2</td><td>Meeting Summary + Next Step</td><td>Email/WhatsApp</td><td>Crisp bullet summary of what was discussed + one clear next step</td></tr>
+      <tr><td>Day 5</td><td>Value Add (Market Data)</td><td>WhatsApp</td><td>Relevant industry news or brand expansion announcement</td></tr>
+      <tr><td>Day 10</td><td>Case Study Share</td><td>WhatsApp + Email</td><td>"Thought you'd find this relevant — investor profile similar to yours, same city tier."</td></tr>
+      <tr><td>Day 15</td><td>Decision Check-In</td><td>Phone Call</td><td>"Where are you in your evaluation process? Is there anything I can clarify?"</td></tr>
+      <tr><td>Day 22</td><td>Urgency or Scarcity Update</td><td>WhatsApp + Call</td><td>Genuine update on location availability or investor pipeline for the same asset</td></tr>
+      <tr><td>Day 30</td><td>Final Decision Conversation</td><td>Call or Meeting</td><td>Structured conversation to either close, address final objection, or gracefully exit</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The CRM Discipline — Daily Non-Negotiables</h4>
+  <div class="grid-2">
+    <div class="card">
+      <h5>Morning (9:00–9:30 AM) — Pipeline Review</h5>
+      <ul>
+        <li>Review all prospects in Stages 3 and 4</li>
+        <li>Identify who needs a touchpoint today</li>
+        <li>Prepare value-add content for those follow-ups</li>
+        <li>Block time for calls — don't ad hoc them</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>Evening (6:00–6:30 PM) — Update & Reflect</h5>
+      <ul>
+        <li>Update CRM with all prospect interactions</li>
+        <li>Note objections raised and how they were handled</li>
+        <li>Set next action and date for every active prospect</li>
+        <li>Flag deals at risk of going cold</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>The Dead Deal Resurrection Protocol</h4>
+  <div class="card-gold">
+    <h5>When a prospect goes silent for 20+ days</h5>
+    <p><strong>Step 1 — The Pattern Interrupt Message:</strong><br>
+    "Mr. Jain, I want to be straightforward with you. It's been a few weeks since we last spoke, and I don't want to keep following up if this isn't the right time or the right opportunity for you. If you've decided to go a different route, I genuinely respect that — just let me know and I'll close my file. If there's still interest, I have something new I'd like to share."</p>
+    <p><strong>Why it works:</strong> It removes the pressure. HNIs respond to consultants who give them an exit — not ones who chase. The "something new to share" creates curiosity without desperation.</p>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MODULE 8 -->
+<div id="m8" class="module">
+<div class="container">
+  <span class="module-tag">Module 08</span>
+  <h3>Closing Strategies for<br>High-Value Deals</h3>
+  <p class="module-intro">The close is not an event — it is the natural conclusion of a well-managed process. If you've done Modules 1–7 correctly, the close is a conversation, not a performance. This module gives you the specific techniques for the final mile.</p>
+
+  <h4>The 4 Closing Philosophies</h4>
+  <div class="grid-2">
+    <div class="card" style="border-left: 4px solid var(--gold)">
+      <h5>The Summary Close</h5>
+      <p>Recap everything you've established in their language. Make the decision feel obvious.</p>
+      <p><em>"So to summarise what we've established: you have ₹1 Crore available, your FD matures next month, you want passive income without operational involvement, and the 22% IRR matches your target. On all four criteria, this fits. The next step is the expression of interest form — shall we complete it today?"</em></p>
+    </div>
+    <div class="card" style="border-left: 4px solid var(--accent)">
+      <h5>The Assumptive Close</h5>
+      <p>Assume the decision is made and move to logistics. Used only after strong buying signals.</p>
+      <p><em>"I'll have the agreement ready for your review by Thursday. Would you prefer a DocuSign version or a physical copy at our office? And for the initial cheque, should I address it to the holding company or your personal name?"</em></p>
+    </div>
+    <div class="card" style="border-left: 4px solid var(--gold)">
+      <h5>The Question Close</h5>
+      <p>Turn the close into a diagnostic question that reveals the final blocker.</p>
+      <p><em>"On a scale of 1–10, how confident are you that this is the right investment for you right now? [They say 7.] What would take it from 7 to 9 for you?"</em></p>
+    </div>
+    <div class="card" style="border-left: 4px solid var(--accent)">
+      <h5>The Columbo Close</h5>
+      <p>Named after the TV detective — after the "meeting" is almost over, casually bring up the final point.</p>
+      <p><em>"Oh — one more thing. Our legal team confirmed yesterday that the GST treatment on franchise royalties has become significantly more investor-friendly. Given your CA's concern last week, this actually addresses that issue completely. I'll send you the notification."</em></p>
+    </div>
+  </div>
+
+  <h4>The Moment of Decision — A Complete Closing Conversation</h4>
+  <div class="script-block" data-label="FULL CLOSING CONVERSATION SCRIPT — ₹1 CRORE FRANCHISE DEAL">
+    <div class="speaker">You (entering the close)</div>
+    <p>"Mr. Desai, before I put the final paperwork together, I want to make sure we're aligned. You've been evaluating this for about 3 weeks now. You've spoken with two of our existing partners, your CA has reviewed the financial model, and we've addressed the location concerns with the feasibility study. Is there anything that's still an open question in your mind?"</p>
+    
+    <div class="speaker">Investor</div>
+    <p>"No, I think we've covered everything. Main bas ek final confirmation chahta hoon ki operations kaun handle karega."</p>
+    
+    <div class="speaker">You</div>
+    <p>"That's the most important operational question, and I want to give you a precise answer. The Outlet Operations Manager is dedicated to your location — they're a salaried employee of the franchise network, not your payroll. They report directly to our regional head with monthly P&L accountability. You receive a monthly report dashboard — revenue, costs, and your profit transfer statement. You're involved in strategic decisions, not daily operations. Does that address it?"</p>
+    
+    <div class="speaker">Investor</div>
+    <p>"Yes, that makes sense."</p>
+    
+    <div class="speaker">You</div>
+    <p>"Good. Then here's what I'd suggest as the next step — I'll send you the franchise agreement this evening for your review. There are three sections I'll specifically flag for you — the exit clause, the royalty structure, and the marketing fund contribution. If you'd like, we can schedule 30 minutes with our legal team to walk through those sections before you sign. The capital transfer can happen simultaneously with signature, or up to 7 days after — whichever is more convenient for your bank processing."</p>
+    <p>[Pause. Do not say anything else. Let him commit or ask the final question.]</p>
+  </div>
+
+  <h4>When the Deal Stalls at the Last Moment</h4>
+  <div class="card-alert">
+    <div class="alert-title">⚠ The Last-Mile Stall — Most Common Cause of Lost ₹1Cr Deals</div>
+    <p>85% of deals that fall apart at the signing stage do so for one of three reasons:</p>
+    <ol>
+      <li><strong>A new influencer entered the picture</strong> (family member, CA, friend who had a bad experience)</li>
+      <li><strong>A competing opportunity emerged</strong> (different asset class or brand)</li>
+      <li><strong>An unresolved doubt surfaced that they didn't voice</strong></li>
+    </ol>
+    <p><strong>Recovery Script:</strong> "Mr. Desai, I want to be honest with you — I'm sensing some hesitation that wasn't there in our last conversation. I'd rather we talk about it directly than have you make a decision you're not fully comfortable with. What's changed?"</p>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ PART III -->
+<div class="part-header">
+  <span class="part-number">Part III — Case Method</span>
+  <h2>Harvard-Style<br>Case Studies</h2>
+  <p>Five real-world investment scenarios. Analyse, decide, then compare with the model answer. This is where your thinking gets tested.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════ CASES -->
+<div id="cases" style="padding: 48px 0;">
+<div class="container">
+
+<!-- CASE 1 -->
+<div class="case-study">
+  <div class="case-header">
+    <div>
+      <div class="case-num">Case Study 01</div>
+      <h4>The Reluctant Commander</h4>
+    </div>
+    <div class="case-tags">
+      <span class="case-tag">FOCO Franchise</span>
+      <span class="case-tag">₹85 Lakhs</span>
+      <span class="case-tag">Tier 2 City</span>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="case-section-title">SITUATION</div>
+    <p>Rajiv Malhotra, 54, is the owner of a mid-sized auto ancillary business in Nashik. Net worth approximately ₹8 Crore. He has ₹85L sitting in a 1-year FD at 7.2% that matures in 6 weeks. A friend recommended him to you. He is decisive, impatient, and has been on 3 calls with you but hasn't committed. Last call he said: <em>"Tumhari company ke baare mein main internet pe padhunga. Phir baat karenge."</em></p>
+    
+    <div class="case-data-grid">
+      <div class="case-data-item"><span class="d-label">Investment Available</span><div class="d-value">₹85L</div></div>
+      <div class="case-data-item"><span class="d-label">FD Maturity</span><div class="d-value">6 weeks</div></div>
+      <div class="case-data-item"><span class="d-label">Current Return</span><div class="d-value">7.2%</div></div>
+      <div class="case-data-item"><span class="d-label">Projected IRR</span><div class="d-value">23%</div></div>
+      <div class="case-data-item"><span class="d-label">Payback Period</span><div class="d-value">4.2 years</div></div>
+      <div class="case-data-item"><span class="d-label">Calls Done</span><div class="d-value">3</div></div>
+    </div>
+
+    <div class="case-section-title">ADDITIONAL CONTEXT</div>
+    <ul>
+      <li>Rajiv has mentioned once that his son "lost money in a startup" and he is now cautious</li>
+      <li>He responds to WhatsApp immediately but takes 2 days to respond to emails</li>
+      <li>In call 2, he asked very specific questions about the exit clause — he wants to know he can get out</li>
+      <li>You have one other investor interested in the same Nashik location</li>
+    </ul>
+
+    <div class="case-section-title">YOUR TASK</div>
+    <ol>
+      <li>Diagnose Rajiv's buyer archetype and primary psychological barrier</li>
+      <li>Design your strategy for the next 10 days</li>
+      <li>Write the exact WhatsApp message you send him today</li>
+      <li>Design the agenda for Call 4 — the intended close call</li>
+    </ol>
+
+    <div class="model-answer">
+      <div class="ma-title">✦ Model Answer</div>
+      <h5>Diagnosis</h5>
+      <p>Rajiv is a Commander with a Skeptic overlay — triggered by his son's startup loss. His "I'll check online" is not due diligence language; it's a way to regain control of the conversation. His exit clause focus confirms his primary fear is entrapment, not return. He doesn't need more enthusiasm — he needs proof of exit and control.</p>
+      
+      <h5>10-Day Strategy</h5>
+      <ol>
+        <li><strong>Day 1:</strong> Send WhatsApp (see below) — address exit clause proactively, include 2-page document on exit options</li>
+        <li><strong>Day 3:</strong> Call if no response. Reference "one thing I forgot to mention re: exit"</li>
+        <li><strong>Day 6:</strong> Send partner testimonial from similar profile investor (business owner, not tech/startup type)</li>
+        <li><strong>Day 9:</strong> Close call — structured around his three remaining concerns</li>
+      </ol>
+      
+      <h5>WhatsApp Message (Day 1)</h5>
+      <p style="font-family: 'DM Mono', monospace; font-size: 13px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 4px; line-height: 1.8;">"Mr. Malhotra, I've been thinking about our last conversation. You mentioned checking the company online — absolutely do that, and here's our DPIIT registration, MCA filings link, and CNBC feature from 2023 to make that easier: [links].<br><br>More importantly, you asked about the exit clause in Call 2. I realise I didn't address it as directly as I should have. I've attached a 2-page summary of the exit provisions — buyback options, transfer rights, and the 3 scenarios under which the franchise agreement can be exited. This was specifically reviewed by a senior CA.<br><br>When you're ready to talk through it, I'm available. Your FD window is 6 weeks — plenty of time to do this properly."</p>
+      
+      <h5>Call 4 Agenda</h5>
+      <ol>
+        <li>Open: "Did you have a chance to go through the exit document?" (Let him answer first)</li>
+        <li>Address remaining objection: Exit + control mechanisms</li>
+        <li>Financial summary: IRR vs. current FD — exactly in numbers</li>
+        <li>Introduce light urgency: "I have another Nashik enquiry — I've prioritised you but need to know your direction this week"</li>
+        <li>Close with assumptive: "If the exit terms work for you, shall I prepare the franchise agreement for your review?"</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- CASE 2 -->
+<div class="case-study">
+  <div class="case-header">
+    <div>
+      <div class="case-num">Case Study 02</div>
+      <h4>The Competing Offer</h4>
+    </div>
+    <div class="case-tags">
+      <span class="case-tag">Enterprise Solution</span>
+      <span class="case-tag">₹1.2 Crore</span>
+      <span class="case-tag">Competitor Active</span>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="case-section-title">SITUATION</div>
+    <p>Priya Mehta, 41, is the MD of a mid-sized logistics company in Ahmedabad. She is evaluating a B2B enterprise SaaS solution (₹1.2 Crore over 3 years). Your competitor, a well-funded startup, has offered the same category of product at ₹90L with a "free first 6 months" clause. Priya was your warm lead and was 80% ready to commit. Yesterday she sent this email: <em>"I've received a very competitive proposal from another vendor. I need you to make a case for why we should go with you."</em></p>
+
+    <div class="case-data-grid">
+      <div class="case-data-item"><span class="d-label">Your Price</span><div class="d-value">₹1.2 Cr</div></div>
+      <div class="case-data-item"><span class="d-label">Competitor Price</span><div class="d-value">₹90L</div></div>
+      <div class="case-data-item"><span class="d-label">Price Gap</span><div class="d-value">₹30L</div></div>
+      <div class="case-data-item"><span class="d-label">Your Tenure</span><div class="d-value">12 years</div></div>
+      <div class="case-data-item"><span class="d-label">Competitor Tenure</span><div class="d-value">2 years</div></div>
+      <div class="case-data-item"><span class="d-label">Your Uptime SLA</span><div class="d-value">99.98%</div></div>
+    </div>
+
+    <div class="case-section-title">YOUR TASK</div>
+    <ol>
+      <li>How do you respond to Priya's email within 24 hours?</li>
+      <li>Build a comparison framework that reframes the ₹30L gap</li>
+      <li>What is your BATNA here? How do you use it?</li>
+      <li>Design the final conversation that wins the deal without discounting</li>
+    </ol>
+
+    <div class="model-answer">
+      <div class="ma-title">✦ Model Answer</div>
+      <h5>24-Hour Email Response</h5>
+      <p>Do NOT react defensively or drop your price immediately. Respond within 4 hours with: "Priya, thank you for being transparent — I appreciate it. I'd welcome the opportunity to help you make this comparison properly. I'm preparing a structured evaluation framework that goes beyond the sticker price. Can we schedule 30 minutes this week? I want to make sure whatever you decide is the right decision for your operations long-term."</p>
+
+      <h5>The Comparison Framework — Total Cost of Ownership (TCO)</h5>
+      <table>
+        <thead><tr><th>Factor</th><th>Competitor (₹90L)</th><th>Your Solution (₹1.2Cr)</th></tr></thead>
+        <tbody>
+          <tr><td>Sticker Price (3 yr)</td><td>₹90 Lakhs</td><td>₹1.2 Crores</td></tr>
+          <tr><td>Implementation Risk</td><td>High (2-yr company, 3 logistics deployments)</td><td>Low (12-yr tenure, 40+ logistics clients)</td></tr>
+          <tr><td>Downtime Cost (est.)</td><td>₹8–12L/year (lower SLA)</td><td>₹1.5L/year (99.98% uptime)</td></tr>
+          <tr><td>Integration Cost (est.)</td><td>₹15–20L additional (custom API work)</td><td>₹0 (pre-built logistics connectors)</td></tr>
+          <tr><td>True 3-Yr TCO</td><td>₹1.25–1.42 Crores</td><td>₹1.2 Crores</td></tr>
+        </tbody>
+      </table>
+      <p>The ₹30L gap disappears — and potentially reverses — when you factor in real operational costs. This is the conversation you need to have. Never discuss price; discuss cost.</p>
+      <h5>BATNA and Final Conversation</h5>
+      <p>Your BATNA: You have 2 other Ahmedabad logistics companies in your pipeline. You can walk away. Use this to project calm confidence, not desperation. In the final meeting: present the TCO analysis, share 2 reference clients in logistics, and offer a senior technical resources commitment for Year 1 (non-financial but high perceived value). If she still pushes on price, offer a phased payment structure — not a discount. Protect your price integrity.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CASE 3 -->
+<div class="case-study">
+  <div class="case-header">
+    <div>
+      <div class="case-num">Case Study 03</div>
+      <h4>The Family Veto</h4>
+    </div>
+    <div class="case-tags">
+      <span class="case-tag">Real Estate Investment</span>
+      <span class="case-tag">₹75 Lakhs</span>
+      <span class="case-tag">Influencer Dynamics</span>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="case-section-title">SITUATION</div>
+    <p>Suresh Agarwal, 58, is fully convinced and ready to invest ₹75 Lakhs in a commercial real estate opportunity yielding 9% annual rental + appreciation. Agreement is prepared. Then, 3 days before signing, his son Rohan (28, MBA, works in Bangalore) enters the picture. Rohan sends you a WhatsApp: <em>"My father is not very tech-savvy and I'm not sure this investment makes sense. I want to see all documents and financial projections before he signs anything."</em></p>
+
+    <div class="case-data-grid">
+      <div class="case-data-item"><span class="d-label">Investment</span><div class="d-value">₹75L</div></div>
+      <div class="case-data-item"><span class="d-label">Rental Yield</span><div class="d-value">9% p.a.</div></div>
+      <div class="case-data-item"><span class="d-label">Expected Appreciation</span><div class="d-value">12% p.a.</div></div>
+      <div class="case-data-item"><span class="d-label">Total IRR (est.)</span><div class="d-value">21%</div></div>
+    </div>
+
+    <div class="case-section-title">YOUR TASK</div>
+    <ol>
+      <li>How do you respond to Rohan without alienating him or disrespecting Suresh?</li>
+      <li>Design a strategy to bring Rohan from skeptic to advocate in 5 days</li>
+      <li>What documents and data do you proactively provide?</li>
+    </ol>
+
+    <div class="model-answer">
+      <div class="ma-title">✦ Model Answer</div>
+      <p><strong>Critical Insight:</strong> Rohan is not an obstacle. He is a gatekeeper who could become your strongest internal advocate. Treat him as a second client. Never position yourself against him.</p>
+      <h5>Response to Rohan (within 2 hours)</h5>
+      <p style="font-family: 'DM Mono', monospace; font-size: 13px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 4px; line-height: 1.8;">"Rohan, I genuinely appreciate you stepping in — this is exactly what should happen with a decision of this scale, and your father is lucky to have you involved. I'd be happy to walk you through everything personally. I'll send a complete due diligence pack today: title documents, RERA registration, rental agreement template, financial model with three scenarios (base, optimistic, stress), and independent valuation report. Can we schedule a 45-minute call this week? I want to make sure your questions are answered directly, not through documents alone."</p>
+      <h5>5-Day Rohan Strategy</h5>
+      <ul>
+        <li><strong>Day 1:</strong> Send complete document pack. MBA-level financial summary (use proper tables, IRR, DCF where applicable). Show you respect his analytical capacity.</li>
+        <li><strong>Day 2:</strong> Call Rohan directly. Ask: "What's your biggest concern?" Listen 80% of the time.</li>
+        <li><strong>Day 3:</strong> Address his specific concerns in writing. Show RERA compliance, legal clearances, exit options.</li>
+        <li><strong>Day 4:</strong> Offer reference — another NRI/Bangalore-based investor's contact (with permission)</li>
+        <li><strong>Day 5:</strong> Three-way call — You, Suresh, and Rohan. Close with Rohan's endorsement.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CASE 4 -->
+<div class="case-study">
+  <div class="case-header">
+    <div>
+      <div class="case-num">Case Study 04</div>
+      <h4>FOCO vs FOFO — The Model Confusion</h4>
+    </div>
+    <div class="case-tags">
+      <span class="case-tag">Franchise</span>
+      <span class="case-tag">₹1.1 Crore</span>
+      <span class="case-tag">Model Decision</span>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="case-section-title">SITUATION</div>
+    <p>Anand Krishnan, 46, a retired Army Colonel, has ₹1.1 Crore available for investment. He is interested in a food brand franchise but is confused between FOCO (Franchise Owned, Company Operated) and FOFO (Franchise Owned, Franchise Operated). He says: <em>"Dono ke baare mein padha hai. Samajh nahi aaya which one suits me better. Explain karo clearly."</em> He is a hands-on personality who enjoyed commanding people and is considering FOFO because "I can manage it myself."</p>
+
+    <div class="case-data-grid">
+      <div class="case-data-item"><span class="d-label">Capital</span><div class="d-value">₹1.1 Cr</div></div>
+      <div class="case-data-item"><span class="d-label">Profile</span><div class="d-value">Retired Col.</div></div>
+      <div class="case-data-item"><span class="d-label">FOCO IRR</span><div class="d-value">21%</div></div>
+      <div class="case-data-item"><span class="d-label">FOFO IRR</span><div class="d-value">28%</div></div>
+      <div class="case-data-item"><span class="d-label">FOFO Risk</span><div class="d-value">Higher</div></div>
+      <div class="case-data-item"><span class="d-label">Daily Involvement</span><div class="d-value">FOFO: 6–8 hrs</div></div>
+    </div>
+
+    <div class="case-section-title">YOUR TASK</div>
+    <ol>
+      <li>Build a FOCO vs FOFO comparison framework suitable for Colonel Krishnan's profile</li>
+      <li>What is your recommendation and why?</li>
+      <li>How do you handle his enthusiasm for FOFO when you believe FOCO is better for him?</li>
+    </ol>
+
+    <div class="model-answer">
+      <div class="ma-title">✦ Model Answer</div>
+      <h5>The Comparison Framework</h5>
+      <table>
+        <thead><tr><th>Parameter</th><th>FOCO</th><th>FOFO</th><th>Colonel's Fit</th></tr></thead>
+        <tbody>
+          <tr><td>Investor Involvement</td><td>Minimal (board-level)</td><td>Full daily ops (6–8 hrs)</td><td>He wants involvement — edge to FOFO</td></tr>
+          <tr><td>IRR Potential</td><td>18–24%</td><td>22–32%</td><td>Edge to FOFO — but dependent on execution</td></tr>
+          <tr><td>Key Risk</td><td>Company operational decisions</td><td>Owner execution quality</td><td>Risk lies with him in FOFO</td></tr>
+          <tr><td>Learning Curve</td><td>None</td><td>6–12 months</td><td>No F&B experience — significant gap</td></tr>
+          <tr><td>Failure Probability</td><td>Low (professional management)</td><td>Moderate (depends on owner capability)</td><td>Edge to FOCO for a first-time F&B investor</td></tr>
+        </tbody>
+      </table>
+      <h5>Recommendation and Delivery</h5>
+      <p>Recommend FOCO — but do it in a way that respects his leadership identity: "Colonel, I've looked at both models against your profile and I want to give you my honest assessment. The FOFO model will appeal to your instinct to lead — and that's completely valid. But running a QSR outlet is not like commanding a unit. The operational variables are different — inventory, staff attrition, health audits, vendor relationships. Our data shows that investors without prior F&B experience have a 40% higher EBITDA variance in FOFO compared to professional management under FOCO."</p>
+      <p>"My recommendation is to start with FOCO — understand the business model from the investor seat for 12–18 months — and if you want to transition to FOFO at renewal, you'll do it with full operational knowledge. This is actually the path our highest-performing franchise investors have taken. FOCO is not passive investing. You'll have full visibility into P&L, operations, and strategy. You're still in command."</p>
+    </div>
+  </div>
+</div>
+
+<!-- CASE 5 -->
+<div class="case-study">
+  <div class="case-header">
+    <div>
+      <div class="case-num">Case Study 05</div>
+      <h4>The Serial Evaluator</h4>
+    </div>
+    <div class="case-tags">
+      <span class="case-tag">Multi-asset Comparison</span>
+      <span class="case-tag">₹2 Crore</span>
+      <span class="case-tag">High Sophistication</span>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="case-section-title">SITUATION</div>
+    <p>Nandita Rao, 48, a second-generation industrialist from Pune, has ₹2 Crore to deploy. She is simultaneously evaluating: your franchise opportunity, a real estate pre-launch, and a PE fund. She has had discovery calls with all three. She is highly analytical, has a finance background, and has already asked you for your "audited franchise revenue data" from the last 3 years. She is not in a hurry. She has said: <em>"I evaluate these carefully. I've rejected 4 opportunities this year."</em></p>
+
+    <div class="case-data-grid">
+      <div class="case-data-item"><span class="d-label">Capital</span><div class="d-value">₹2 Crore</div></div>
+      <div class="case-data-item"><span class="d-label">Competing Options</span><div class="d-value">3 active</div></div>
+      <div class="case-data-item"><span class="d-label">Rejections This Year</span><div class="d-value">4</div></div>
+      <div class="case-data-item"><span class="d-label">Your Offered IRR</span><div class="d-value">24%</div></div>
+    </div>
+
+    <div class="case-section-title">YOUR TASK</div>
+    <ol>
+      <li>How do you position against two very different asset classes (RE + PE) without attacking them?</li>
+      <li>What is your strategy to become her preferred option without being eager?</li>
+      <li>How do you handle her request for audited data — what do you provide and how?</li>
+      <li>Write the email you send her this week</li>
+    </ol>
+
+    <div class="model-answer">
+      <div class="ma-title">✦ Model Answer</div>
+      <h5>Positioning Strategy — Portfolio Lens</h5>
+      <p>Do not compete with RE or PE. Position as a <strong>complementary portfolio allocation</strong>: "Nandita, I'd actually suggest not comparing these as alternatives. They serve different portfolio functions. PE is your high-beta, 7–10 year illiquid bet. Real estate is your capital preservation + moderate appreciation play. A franchise investment in FOCO is your yield-oriented, medium-liquidity position — like a quality bond but with 24% IRR instead of 8%. Each has a role in a ₹2 Crore allocation."</p>
+      <h5>Handling the Data Request</h5>
+      <p>Provide what you have — don't delay or hedge. Send: (1) FY22–24 outlet-level EBITDA data (anonymised by location), (2) Auditor certification of network-level revenue, (3) Worst-performing outlet data alongside best — proactive transparency earns analytical trust. Accompany with a note: "I've included our underperformer data as well. A deal that can only be sold with the best numbers isn't one I want to bring to someone at your level."</p>
+      <h5>The Email</h5>
+      <p style="font-family: 'DM Mono', monospace; font-size: 12px; background: rgba(0,0,0,0.2); padding: 16px; border-radius: 4px; line-height: 1.8;">Subject: Audited Performance Data + One Framework Worth Considering<br><br>"Nandita, attached is our FY22–24 outlet performance data — full network cohort, including underperformers. I've also attached a one-page allocation framework that might be useful as you evaluate the three options simultaneously — not as a pitch, but as a thinking tool.<br><br>One observation: the three investments you're evaluating are genuinely non-overlapping in terms of return profile, liquidity, and risk type. If you find that framing useful, I'd be glad to discuss how to think about portfolio allocation across them.<br><br>No rush on your end — I'll reach out in 10 days unless you'd like to connect sooner."</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ SIMULATIONS -->
+<div class="part-header">
+  <span class="part-number">Part IV — Simulation Exercises</span>
+  <h2>The Drill Ground</h2>
+  <p>These drills are done with a partner or recorded solo. The goal is not perfection — it is fluency under pressure.</p>
+</div>
+
+<div id="simulations" style="padding: 48px 0;">
+<div class="container">
+
+<div class="sim-block">
+  <div class="sim-header"><span class="sim-icon">📞</span><h4>Simulation 01 — The Cold Discovery Call (20 minutes)</h4></div>
+  <div class="sim-body">
+    <p><strong>Setup:</strong> Partner plays a high-net-worth businessperson who agreed to a "15-minute call." They are polite but skeptical and not aware of details. You must complete a full DARE discovery in 20 minutes.</p>
+    <p><strong>Rules:</strong></p>
+    <ul>
+      <li>You may not pitch your product until minute 15</li>
+      <li>You must ask at least 6 specific discovery questions</li>
+      <li>You must end with a defined next step, not "I'll send you some information"</li>
+    </ul>
+    <p><strong>Debrief Questions:</strong> Did you talk more than 40% of the time? Did you fill silences unnecessarily? Was your next step specific and time-bound?</p>
+  </div>
+</div>
+
+<div class="sim-block">
+  <div class="sim-header"><span class="sim-icon">⚔️</span><h4>Simulation 02 — The Objection Gauntlet (30 minutes)</h4></div>
+  <div class="sim-body">
+    <p><strong>Setup:</strong> Partner fires 8 objections in sequence without pause. You must handle each using the ACE framework within 90 seconds before the next one comes.</p>
+    <p><strong>Objection List (use in this order):</strong></p>
+    <ol>
+      <li>"Return bahut kam hai"</li>
+      <li>"Market uncertain hai abhi"</li>
+      <li>"Apne CA se baat karni hai"</li>
+      <li>"Main pehle research karunga"</li>
+      <li>"Mere ek dost ka franchise fail ho gaya tha"</li>
+      <li>"Price negotiate ho sakta hai?"</li>
+      <li>"3 mahine baad baat karte hain"</li>
+      <li>"What if the brand shuts down?"</li>
+    </ol>
+    <p><strong>Scoring:</strong> Partner scores each response 1–5 on: Did not get defensive, offered a framework (not just reassurance), moved the conversation forward.</p>
+  </div>
+</div>
+
+<div class="sim-block">
+  <div class="sim-header"><span class="sim-icon">🤝</span><h4>Simulation 03 — The Final Negotiation (45 minutes)</h4></div>
+  <div class="sim-body">
+    <p><strong>Setup:</strong> The investor (partner) is 90% ready but wants: (1) a 10% price reduction, (2) a 2-year lock-in instead of 5, and (3) a guaranteed monthly payout clause. You have the authority to offer none of these but can offer two small value-adds (priority location support, accelerated breakeven review at month 6).</p>
+    <p><strong>Goal:</strong> Close the deal without giving any of the three concessions demanded, without losing the prospect.</p>
+    <p><strong>Debrief:</strong> Where did you feel the urge to accommodate? How did you maintain frame? What language protected your position without sounding rigid?</p>
+  </div>
+</div>
+
+<div class="sim-block">
+  <div class="sim-header"><span class="sim-icon">📊</span><h4>Simulation 04 — The Financial Explanation (15 minutes)</h4></div>
+  <div class="sim-body">
+    <p><strong>Setup:</strong> Explain IRR, payback period, and break-even analysis for a specific investment to a partner who plays a 55-year-old businessman with no finance background. No jargon. No whiteboard. Just verbal explanation and a single sheet of numbers.</p>
+    <p><strong>Pass criteria:</strong> Partner can explain IRR back to you in their own words by end of session.</p>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ TOOLKIT -->
+<div class="part-header">
+  <span class="part-number">Part V — Consultant Toolkit</span>
+  <h2>Templates, Frameworks<br>& Systems</h2>
+  <p>Production-ready tools you use from Day 1. Not practice materials — operational assets.</p>
+</div>
+
+<div id="toolkit" style="padding: 48px 0;">
+<div class="container">
+
+  <h4>Investor Pitch Structure — One-Page Template</h4>
+  <div class="card" style="border: 2px solid var(--ink);">
+    <h5>The Consultant's Pitch Page — ₹[X] Lakh Investment Proposal</h5>
+    <div class="grid-2">
+      <div>
+        <p><strong>Section 1 — Their Situation (2 lines)</strong><br>Summarise their capital, current allocation, and gap. Written in their language.</p>
+        <p><strong>Section 2 — The Opportunity (3 lines)</strong><br>What, why now, why this brand/solution specifically.</p>
+        <p><strong>Section 3 — Financial Snapshot</strong><br>Investment | IRR | Payback | Break-even | Monthly Cash Flow</p>
+      </div>
+      <div>
+        <p><strong>Section 4 — Risk Snapshot (3 bullets)</strong><br>State the top 3 risks and corresponding mitigators. Never hide.</p>
+        <p><strong>Section 5 — References</strong><br>2 investor contacts they can speak with directly.</p>
+        <p><strong>Section 6 — Next Step</strong><br>One specific, time-bound action. Not "let us know."</p>
+      </div>
+    </div>
+  </div>
+
+  <h4>WhatsApp Follow-up Templates</h4>
+  
+  <div class="template-block">
+    <span class="tpl-header">Template 01 — Post Discovery Call Summary</span>Mr. [Name], thank you for your time today.
+
+Quick summary of what we covered:
+• Your investment range: ₹[X]–[Y]
+• Key priority: [Their stated goal — passive income / growth / diversification]  
+• Main concern: [Their stated concern]
+
+Next step: [Specific action] by [specific date].
+
+I'm preparing the financial model tailored to your range. Will share by [time] tomorrow.
+
+[Your Name] | [Designation]
+  </div>
+
+  <div class="template-block">
+    <span class="tpl-header">Template 02 — Value-Add Follow Up (Day 7)</span>Mr. [Name], sharing something relevant to our conversation last week.
+
+[Brand Name] just opened their 3rd outlet in [nearby city]. Outlet performance in Month 4: ₹[X]L revenue against a ₹[Y]L break-even — 40% above threshold.
+
+This is representative of what we're seeing in markets with similar demographics to [their city].
+
+Happy to share the full city-wise performance breakdown if useful.
+
+[Your Name]
+  </div>
+
+  <div class="template-block">
+    <span class="tpl-header">Template 03 — The Pattern Interrupt (Day 20+ Silence)</span>Mr. [Name], I want to be straightforward.
+
+It's been a few weeks since we connected. If you've moved in a different direction, I completely understand — just let me know and I'll close my file.
+
+If the timing wasn't right or something was unresolved, I'm happy to pick up exactly where we left off — no pressure, no re-pitch.
+
+Either way, I'd appreciate a word.
+
+[Your Name]
+  </div>
+
+  <h4>ROI Explanation Template — Verbal Script</h4>
+  <div class="script-block" data-label="COMPLETE ROI EXPLANATION — INVEST ₹1 CRORE">
+    <p>"Let me give you three numbers that frame this investment clearly."</p>
+    <p>"First — what your ₹1 Crore is doing today. At 7% in an FD, that's ₹7 Lakhs a year. After inflation at 6%, your real return is roughly ₹1 Lakh. Your money is barely standing still."</p>
+    <p>"Second — what this investment does. Based on our outlet performance data for your city profile, you're looking at ₹19–22 Lakhs in annual profit from Year 1, scaling to ₹24–26L by Year 3 as the outlet matures. That's an IRR of 22–24%."</p>
+    <p>"Third — the payback window. You recover your full ₹1 Crore in approximately 4.3 years. After that, the outlet continues generating ₹22L+ annually for the remaining 5.7 years of the initial franchise term. That's approximately ₹1.25 Crore in post-recovery profit."</p>
+    <p>"The question is not whether this outperforms your FD — it clearly does. The question is whether the risk profile is right for this portion of your portfolio. Shall we go through the risk analysis?"</p>
+  </div>
+
+  <h4>Deal Tracking System — Pipeline Dashboard</h4>
+  <table>
+    <thead><tr><th>Prospect</th><th>Capital</th><th>Stage</th><th>Last Contact</th><th>Primary Objection</th><th>Next Action</th><th>Next Date</th><th>Est. Close</th></tr></thead>
+    <tbody>
+      <tr><td>R. Malhotra</td><td>₹85L</td><td>4 — Commit Pending</td><td>3 days ago</td><td>Exit clause clarity</td><td>Send exit doc + Call</td><td>Thursday</td><td>This month</td></tr>
+      <tr><td>P. Mehta</td><td>₹1.2Cr</td><td>3 — Active Eval</td><td>Yesterday</td><td>Competitor price</td><td>TCO analysis email</td><td>Tomorrow</td><td>2–3 weeks</td></tr>
+      <tr><td>S. Agarwal</td><td>₹75L</td><td>4 — Family veto</td><td>2 days ago</td><td>Son approval</td><td>3-way call</td><td>Friday</td><td>10 days</td></tr>
+      <tr><td>N. Rao</td><td>₹2Cr</td><td>2 — Discovery</td><td>1 week ago</td><td>Multi-option eval</td><td>Portfolio framework email</td><td>Today</td><td>6–8 weeks</td></tr>
+    </tbody>
+  </table>
+
+  <h4>FOCO vs FOFO Decision Matrix</h4>
+  <table>
+    <thead><tr><th>Criteria</th><th>FOCO (Company Operated)</th><th>FOFO (Franchisee Operated)</th></tr></thead>
+    <tbody>
+      <tr><td>Daily involvement required</td><td>Minimal (monthly review)</td><td>High (daily oversight)</td></tr>
+      <tr><td>Expected IRR</td><td>18–24%</td><td>22–32%</td></tr>
+      <tr><td>Operational risk bearer</td><td>Company</td><td>Franchisee (investor)</td></tr>
+      <tr><td>Best suited for</td><td>Passive investors, professionals, HNIs with no F&B experience</td><td>Entrepreneurs, ex-operators, hands-on investors with prior business management experience</td></tr>
+      <tr><td>Profit dependence</td><td>Company management quality</td><td>Investor's operational capability</td></tr>
+      <tr><td>Failure scenarios</td><td>Brand-level mismanagement</td><td>Owner execution failure</td></tr>
+      <tr><td>Recommended for first-time investors?</td><td>✓ Yes — lower variance</td><td>Only with strong prior experience</td></tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ 30-DAY PLAN -->
+<div class="part-header">
+  <span class="part-number">Part VI — 30-Day Transformation Plan</span>
+  <h2>From BD Executive<br>to BD Consultant</h2>
+  <p>A day-by-day, week-by-week operating system for internalising this course and applying it to live deals immediately.</p>
+</div>
+
+<div id="plan30" style="padding: 48px 0;">
+<div class="container">
+
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-val">3%</div><div class="kpi-label">Target Conversion Rate (Qualified → Close)</div></div>
+    <div class="kpi-card"><div class="kpi-val">₹1Cr</div><div class="kpi-label">Average Deal Size Target</div></div>
+    <div class="kpi-card"><div class="kpi-val">15</div><div class="kpi-label">Qualified Prospects in Pipeline (minimum)</div></div>
+    <div class="kpi-card"><div class="kpi-val">2</div><div class="kpi-label">Closed Deals by Day 30</div></div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">Week 1 · Days 1–7</span>
+      <span class="week-title">Foundation & Audit</span>
+    </div>
+    <div class="week-body">
+      <div class="grid-2">
+        <div>
+          <h5>Daily Routine</h5>
+          <ul>
+            <li>Morning: 30 min Module review (one section per day)</li>
+            <li>10:00 AM: Pipeline review — identify day's priority prospects</li>
+            <li>10:30–1:30 PM: Prospect calls / meetings</li>
+            <li>6:00 PM: CRM update + next-action setting</li>
+            <li>7:00 PM: Record 5-min video of yourself handling one objection — review it</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Week 1 Targets</h5>
+          <ul>
+            <li>Complete Modules 1 and 2 fully</li>
+            <li>Audit your current pipeline — classify every prospect into the 5 stages</li>
+            <li>Identify 3 "dead" prospects and send Pattern Interrupt messages</li>
+            <li>Record your current discovery call style — identify 5 filler phrases to eliminate</li>
+            <li>Build your first FOCO/FOFO comparison sheet for your offering</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-alert" style="margin-top: 16px;">
+        <div class="alert-title">Week 1 Skill Focus</div>
+        <p>Stop using: "Actually", "No worries sir", "Don't worry", "Only ₹X Lakhs". Replace with precise, authoritative language. This is the single highest-leverage change you can make immediately.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">Week 2 · Days 8–14</span>
+      <span class="week-title">Framework Application</span>
+    </div>
+    <div class="week-body">
+      <div class="grid-2">
+        <div>
+          <h5>Daily Routine</h5>
+          <ul>
+            <li>Morning: 30 min practice — simulate one objection handling scenario</li>
+            <li>Apply DARE framework to every call this week — structure them</li>
+            <li>Every evening: Write one sentence on what the prospect's primary fear is</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Week 2 Targets</h5>
+          <ul>
+            <li>Complete Modules 3 and 4</li>
+            <li>Conduct 2 Simulation Exercises with a colleague or recorded solo</li>
+            <li>Have 5 qualified discovery conversations using the full 45-min template</li>
+            <li>Build your ROI explanation and practice delivering it in under 3 minutes</li>
+            <li>Create personalised WhatsApp templates for your product category</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">Week 3 · Days 15–21</span>
+      <span class="week-title">Deal Acceleration</span>
+    </div>
+    <div class="week-body">
+      <div class="grid-2">
+        <div>
+          <h5>Daily Routine</h5>
+          <ul>
+            <li>Morning: Review your 3 hottest prospects — what is the last open question for each?</li>
+            <li>Use ACE framework for every objection — written log</li>
+            <li>Practice one close scenario per day (use the 4 closing philosophies in rotation)</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Week 3 Targets</h5>
+          <ul>
+            <li>Complete Modules 5 and 6</li>
+            <li>Move at least 2 prospects from Stage 3 → Stage 4</li>
+            <li>Run Simulation 03 (negotiation drill) with a partner</li>
+            <li>Read and analyse Case Studies 1–3 fully</li>
+            <li>Identify your BATNA for your top 3 open deals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">Week 4 · Days 22–30</span>
+      <span class="week-title">Close & Systemise</span>
+    </div>
+    <div class="week-body">
+      <div class="grid-2">
+        <div>
+          <h5>Daily Routine</h5>
+          <ul>
+            <li>Morning: Every Stage 4 prospect — what is the single remaining barrier? Address it today.</li>
+            <li>Run at least 2 close conversations this week</li>
+            <li>After every call, write: "What did I do as a consultant? What did I do as a salesperson?"</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Week 4 Targets</h5>
+          <ul>
+            <li>Complete Modules 7 and 8 + all 5 Case Studies</li>
+            <li>Close 1–2 deals. If not closed, they should be in Stage 4 with clear timelines.</li>
+            <li>Build your deal tracking dashboard and maintain it daily</li>
+            <li>Write a post-mortem on every deal that didn't close — identify the specific failure point</li>
+            <li>Ask every closed deal investor for 1 referral</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-gold" style="margin-top: 16px;">
+        <h5>Day 30 Self-Assessment</h5>
+        <p>Rate yourself 1–10 on each dimension:</p>
+        <ul>
+          <li>Can I explain IRR, payback, and break-even clearly without notes?</li>
+          <li>Do I spend less than 35% of the call talking?</li>
+          <li>Can I handle 8 standard objections without hesitation?</li>
+          <li>Do I follow up with value every time, not just check-ins?</li>
+          <li>Do I feel like a consultant or a salesperson when I walk into a call?</li>
+        </ul>
+        <p>A score of 40+ means you've made the transition. Below 35 means revisit your weakest 2 modules.</p>
+      </div>
+    </div>
+  </div>
+
+  <h4>KPI Tracking Framework — Monthly</h4>
+  <table>
+    <thead><tr><th>KPI</th><th>How to Measure</th><th>Month 1 Target</th><th>Month 3 Target</th><th>Month 6 Target</th></tr></thead>
+    <tbody>
+      <tr><td>Qualified Lead → Discovery Rate</td><td>Discovery calls / total leads</td><td>60%</td><td>70%</td><td>75%</td></tr>
+      <tr><td>Discovery → Stage 3 Rate</td><td>Active evaluation / discovery calls</td><td>40%</td><td>50%</td><td>60%</td></tr>
+      <tr><td>Stage 3 → Close Rate</td><td>Deals closed / Stage 3 prospects</td><td>20%</td><td>30%</td><td>40%</td></tr>
+      <tr><td>Overall Conversion</td><td>Deals closed / total qualified leads</td><td>3–5%</td><td>7–10%</td><td>12–15%</td></tr>
+      <tr><td>Average Deal Size</td><td>Total revenue / number of deals</td><td>₹80L</td><td>₹95L</td><td>₹1.1Cr</td></tr>
+      <tr><td>Pipeline Quality Score</td><td>% of pipeline in Stage 3+</td><td>25%</td><td>35%</td><td>45%</td></tr>
+      <tr><td>Referral Rate</td><td>New leads from existing investors / total new leads</td><td>5%</td><td>15%</td><td>25%</td></tr>
+      <tr><td>Follow-up Response Rate</td><td>Responses received / follow-ups sent</td><td>25%</td><td>35%</td><td>45%</td></tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ FOOTER -->
+<div class="footer">
+  <p><strong>THE BD CONSULTANT CODEX</strong></p>
+  <p>Elite High-Ticket Sales Training · India Edition · ₹50L–₹2Cr Investment Conversations</p>
+  <p style="margin-top: 16px; font-size: 10px;">This material is designed for trained business development professionals. Financial projections referenced are illustrative. Actual performance depends on market conditions, operational execution, and brand-specific variables. Always conduct independent due diligence.</p>
+</div>
+
+</body>
+</html>
